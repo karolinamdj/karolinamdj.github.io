@@ -1,1 +1,0 @@
-# http://karolinamdj.github.io
