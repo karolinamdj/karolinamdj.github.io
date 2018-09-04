@@ -1,16 +1,37 @@
+// GLOBAL
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  color: #333333;
 }
 
 html {
   font-size: 1em;
 }
 
+section>.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.border-box {
+  border: 1px solid #333333;
+}
+
+.headline {
+  font-family: 'Slabo 27px', serif;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  color: #000;
+}
+
+
 // HEADER
 
 .header {
+  margin-bottom: 60px;
   min-height: 100vh;
   background: url('../images/back.jpg');
   background-size: cover;
@@ -34,14 +55,13 @@ html {
 
 .introduction {
   height: 60vh;
-  color: #333333;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   .introduction-box {
     text-align: center;
     font-family: 'Slabo 27px', serif;
-    border: 1px solid #333333;
     padding: 35px;
     h1 {
       font-size: 3em;
@@ -49,6 +69,25 @@ html {
   }
 }
 
+
+// ABOUT
+
+.about {
+  .photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 250px;
+      border-radius: 50%;
+    }
+  }
+}
+
+
+
+
+// MEDIA QUERIES
 
 @media (max-width: 768px) {
   .header {
