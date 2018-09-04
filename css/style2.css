@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; }
+
+html { font-size: 1rem; }
+
+.nav-jumbotron { height: 100vh; width: 100vw; }
+
+.nav-container { position: absolute; height: 100%; width: 100%; display: flex; flex-wrap: wrap; font-family: 'Montserrat', sans-serif; color: #333333; }
+
+.nav-container .nav-box { display: flex; justify-content: center; align-items: center; height: 50%; width: 50%; text-align: center; transition: 0.3s; cursor: pointer; }
+
+.nav-container .nav-box:hover { background-color: #ee915a; }
+
+.nav-container .skills-box { background-color: #EBEBEB; }
+
+.nav-container .works-box { background-color: #EBEBEB; }
+
+.nav-container .contact-box { background-color: #DDDDDD; }
+
+.nav-container h3 { font-size: 2em; }
+
+.nav-container h3 span { font-size: 4em; font-weight: bold; }
+
+.center-box { position: relative; background-color: #333333; color: #fff; width: 20vw; height: 20vw; left: calc(50vw - 10vw); top: calc(50vh - 10vw); transform: rotate(45deg); }
+
+.center-box .introduce { display: flex; justify-content: center; align-items: center; width: inherit; height: inherit; text-align: center; transform: rotate(-45deg); }
+
+.center-box .introduce h1 { font-size: 3vw; }
+
+.center-box .introduce h2 { font-size: 1.5vw; font-weight: lighter; }
