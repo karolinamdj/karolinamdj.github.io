@@ -1,14 +1,14 @@
-* { margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; color: #333333; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { font-size: 1em; }
+body { font-family: 'Montserrat', sans-serif; color: #333333; font-size: 1em; }
 
 section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .border-box { border: 1px solid #333333; }
 
-.headline { font-family: 'Slabo 27px', serif; font-size: 2.5em; padding-bottom: 10px; color: #000; }
+.headline { font-family: 'Slabo 27px', serif; font-size: 2.8em; letter-spacing: 1px; padding-bottom: 10px; color: #000; }
 
-.paragraph { font-size: 1em; }
+.paragraph { font-size: 1.2em; }
 
 .header { margin-bottom: 60px; min-height: 100vh; background: url("../images/back.jpg"); background-size: cover; background-position: 50% 40%; transition: all 0.5s ease-in-out; }
 
@@ -46,12 +46,30 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .skills .technologies .skill-box p { font-size: 1em; margin-bottom: 0; }
 
+.portfolio { text-align: center; }
+
+.portfolio h3 { margin-top: 30px; }
+
+.portfolio .img-box { position: relative; }
+
+.portfolio .img-box:hover .layer { opacity: 1; }
+
+.portfolio .img-box img { width: 100%; height: 300px; -o-object-fit: cover; object-fit: cover; }
+
+.portfolio .img-box .layer { position: absolute; width: 100%; height: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); color: #fff; transition: .5s; opacity: 0; }
+
+.portfolio .img-box .layer i.fas { font-size: 3em; margin: 0 1rem 1.5rem 1rem; cursor: pointer; }
+
+.portfolio .img-box .layer .desc { margin-bottom: 2rem; letter-spacing: 1px; padding: 0 1rem 0 1rem; }
+
+.portfolio .img-box .layer .tech-box { display: inline; font-size: 1.2em; background-color: green; padding: .5rem; margin: 1rem .5rem .5rem .5rem; }
+
 @media (max-width: 992px) { .skills .technologies .skill-box i.fab { font-size: 3em; }
   .skills .technologies .skill-box h5 { font-size: 1.5em; } }
 
 @media (max-width: 768px) { .header { transition: all 0.5s ease-in-out; background-position: 50% 15%; }
   .about .border-box { border: none; }
-  .skills .technologies { border: 5px solid #fff; text-align: left; }
+  .skills .technologies { text-align: left; }
   .skills .technologies .col-12 { padding: 0; }
   .skills .technologies .col-colored { background-color: #fff; border-radius: 10px; }
   .skills .technologies .skill-box { display: -ms-inline-flexbox; display: inline-flex; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 19%; text-align: center; margin: 5px 0 5px 0; }
