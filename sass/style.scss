@@ -23,14 +23,14 @@ section>.container {
 
 .headline {
   font-family: 'Slabo 27px', serif;
-  font-size: 2.8em;
+  font-size: 2.5em;
   letter-spacing: 1px;
   padding-bottom: 10px;
   color: #000;
 }
 
 .paragraph {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 
@@ -132,7 +132,7 @@ section>.container {
 
 .portfolio {
   text-align: center;
-  h3 {
+  h4 {
     margin-top: 30px;
   }
   .img-box {
@@ -158,20 +158,31 @@ section>.container {
       color: #fff;
       transition: .5s;
       opacity: 0;
-      i.fas {
-        font-size: 3em;
-        margin: 0 1rem 1.5rem 1rem;
+      a {
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        text-align: center;
+        line-height: 44px;
+        background-color: #000;
+        margin: 0 1rem 1rem 1rem;
+        transition: .5s;
         cursor: pointer;
+        &:hover {
+          background-color: #cc5e37;
+        }
+        i.fas {
+          font-size: 1.5em;
+          color: #fff;
+        }
       }
       .desc {
         margin-bottom: 2rem;
-        letter-spacing: 1px;
         padding: 0 1rem 0 1rem;
       }
       .tech-box {
         display: inline;
-        font-size: 1.2em;
-        background-color: green;
+        background-color: #cc5e37;
         padding: .5rem;
         margin: 1rem .5rem .5rem .5rem;
       }

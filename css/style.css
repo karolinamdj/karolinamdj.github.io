@@ -6,9 +6,9 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .border-box { border: 1px solid #333333; }
 
-.headline { font-family: 'Slabo 27px', serif; font-size: 2.8em; letter-spacing: 1px; padding-bottom: 10px; color: #000; }
+.headline { font-family: 'Slabo 27px', serif; font-size: 2.5em; letter-spacing: 1px; padding-bottom: 10px; color: #000; }
 
-.paragraph { font-size: 1.2em; }
+.paragraph { font-size: 1em; }
 
 .header { margin-bottom: 60px; min-height: 100vh; background: url("../images/back.jpg"); background-size: cover; background-position: 50% 40%; transition: all 0.5s ease-in-out; }
 
@@ -48,7 +48,7 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .portfolio { text-align: center; }
 
-.portfolio h3 { margin-top: 30px; }
+.portfolio h4 { margin-top: 30px; }
 
 .portfolio .img-box { position: relative; }
 
@@ -58,11 +58,15 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .portfolio .img-box .layer { position: absolute; width: 100%; height: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); color: #fff; transition: .5s; opacity: 0; }
 
-.portfolio .img-box .layer i.fas { font-size: 3em; margin: 0 1rem 1.5rem 1rem; cursor: pointer; }
+.portfolio .img-box .layer a { height: 40px; width: 40px; display: inline-block; text-align: center; line-height: 44px; background-color: #000; margin: 0 1rem 1rem 1rem; transition: .5s; cursor: pointer; }
 
-.portfolio .img-box .layer .desc { margin-bottom: 2rem; letter-spacing: 1px; padding: 0 1rem 0 1rem; }
+.portfolio .img-box .layer a:hover { background-color: #cc5e37; }
 
-.portfolio .img-box .layer .tech-box { display: inline; font-size: 1.2em; background-color: green; padding: .5rem; margin: 1rem .5rem .5rem .5rem; }
+.portfolio .img-box .layer a i.fas { font-size: 1.5em; color: #fff; }
+
+.portfolio .img-box .layer .desc { margin-bottom: 2rem; padding: 0 1rem 0 1rem; }
+
+.portfolio .img-box .layer .tech-box { display: inline; background-color: #cc5e37; padding: .5rem; margin: 1rem .5rem .5rem .5rem; }
 
 @media (max-width: 992px) { .skills .technologies .skill-box i.fab { font-size: 3em; }
   .skills .technologies .skill-box h5 { font-size: 1.5em; } }
