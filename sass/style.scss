@@ -33,11 +33,9 @@ section>.container {
   font-size: 1em;
 }
 
-
 // HEADER
 
 .header {
-  margin-bottom: 60px;
   min-height: 100vh;
   background: url('../images/back.jpg');
   background-size: cover;
@@ -97,7 +95,7 @@ section>.container {
 // SKILLS
 
 .skills {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   text-align: center;
   .skills-desc {
     margin-bottom: 3rem;
@@ -118,16 +116,19 @@ section>.container {
 // PORTFOLIO
 
 .portfolio {
+  background-color: #fff;
+  padding-bottom: 60px;
   text-align: center;
-  .empty {
-    height: 30%;
-  }
   h3.headline {
     margin-bottom: 50px;
   }
   .project-box {
+    box-shadow: 0 0 5px #cecccc;
     margin-bottom: 60px;
-    border: 1px solid #969696;
+    background-color: #fff;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #fff;
+    border-top: 20px solid #fff;
     .img-box {
       position: relative;
       &:hover {
@@ -179,7 +180,8 @@ section>.container {
       margin: 0;
     }
     .desc {
-      padding-top: 1rem;
+      padding: 1rem 0;
+      margin: 0;
     }
     .tech-box {
       display: inline-block;

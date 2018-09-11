@@ -10,7 +10,7 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .paragraph { font-size: 1em; }
 
-.header { margin-bottom: 60px; min-height: 100vh; background: url("../images/back.jpg"); background-size: cover; background-position: 50% 40%; transition: all 0.5s ease-in-out; }
+.header { min-height: 100vh; background: url("../images/back.jpg"); background-size: cover; background-position: 50% 40%; transition: all 0.5s ease-in-out; }
 
 .header .navbar-light { background-color: #fff; }
 
@@ -32,7 +32,7 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .about .photo-container img { height: 250px; border-radius: 50%; }
 
-.skills { background-color: #F6F6F6; text-align: center; }
+.skills { background-color: #f6f6f6; text-align: center; }
 
 .skills .skills-desc { margin-bottom: 3rem; }
 
@@ -40,13 +40,11 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .skills .technologies img { width: 80px; }
 
-.portfolio { text-align: center; }
-
-.portfolio .empty { height: 30%; }
+.portfolio { background-color: #fff; padding-bottom: 60px; text-align: center; }
 
 .portfolio h3.headline { margin-bottom: 50px; }
 
-.portfolio .project-box { margin-bottom: 60px; border: 1px solid #969696; }
+.portfolio .project-box { box-shadow: 0 0 5px #cecccc; margin-bottom: 60px; background-color: #fff; border-left: 20px solid #fff; border-right: 20px solid #fff; border-top: 20px solid #fff; }
 
 .portfolio .project-box .img-box { position: relative; }
 
@@ -64,7 +62,7 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .portfolio .project-info h5 { padding: 1rem 0; margin: 0; }
 
-.portfolio .project-info .desc { padding-top: 1rem; }
+.portfolio .project-info .desc { padding: 1rem 0; margin: 0; }
 
 .portfolio .project-info .tech-box { display: inline-block; padding: 0 .4rem; margin: 0 .5rem .5rem .5rem; border: 1px solid #333333; background-color: inherit; }
 
