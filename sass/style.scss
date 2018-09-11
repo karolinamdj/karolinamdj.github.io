@@ -119,60 +119,74 @@ section>.container {
 
 .portfolio {
   text-align: center;
-  h4 {
-    margin-top: 30px;
+  .empty {
+    height: 30%;
   }
-  .img-box {
-    position: relative;
-    &:hover {
+  h3.headline {
+    margin-bottom: 50px;
+  }
+  .project-box {
+    margin-bottom: 60px;
+    border: 1px solid #969696;
+    .img-box {
+      position: relative;
+      &:hover {
+        .layer {
+          opacity: 1;
+        }
+      }
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
       .layer {
-        opacity: 1;
-      }
-    }
-    img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-    .layer {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #fff;
-      transition: .5s;
-      opacity: 0;
-      a {
-        height: 40px;
-        width: 40px;
-        display: inline-block;
-        text-align: center;
-        line-height: 44px;
-        background-color: #000;
-        margin: 0 1rem 1rem 1rem;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
         transition: .5s;
-        cursor: pointer;
-        &:hover {
-          background-color: #cc5e37;
+        opacity: 0;
+        a {
+          height: 40px;
+          width: 40px;
+          display: inline-block;
+          text-align: center;
+          line-height: 44px;
+          margin: 0 1rem;
+          cursor: pointer;
+          &:hover {
+            i.fas {
+              transform: scale(1.5);
+            }
+          }
+          i.fas {
+            font-size: 2.5em;
+            color: #fff;
+            transition: .5s;
+          }
         }
-        i.fas {
-          font-size: 1.5em;
-          color: #fff;
-        }
       }
-      .desc {
-        margin-bottom: 2rem;
-        padding: 0 1rem 0 1rem;
-      }
-      .tech-box {
-        display: inline;
-        background-color: #cc5e37;
-        padding: .5rem;
-        margin: 1rem .5rem .5rem .5rem;
-      }
+    }
+  }
+  .project-info {
+    h5 {
+      padding: 1rem 0;
+      margin: 0;
+    }
+    .desc {
+      padding-top: 1rem;
+    }
+    .tech-box {
+      display: inline-block;
+      padding: 0 .4rem;
+      margin: 0 .5rem .5rem .5rem;
+      border: 1px solid #333333;
+      background-color: inherit;
     }
   }
 }
@@ -180,7 +194,11 @@ section>.container {
 // MEDIA QUERIES
 
 @media (max-width: 992px) {
-
+  .portfolio {
+    .empty {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 768px) {
