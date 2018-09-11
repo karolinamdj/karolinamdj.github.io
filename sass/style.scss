@@ -99,31 +99,18 @@ section>.container {
 .skills {
   background-color: #F6F6F6;
   text-align: center;
-  .course {
+  .skills-desc {
     margin-bottom: 3rem;
   }
   .technologies {
     .skill-box {
-      height: 5.5rem;
+      height: 6.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      i.fab {
-        font-size: 3.5em;
-      }
-      h5 {
-        font-weight: bold;
-        font-size: 1.8em;
-        margin: 0;
-        &.icon-size {
-          font-size: 3em;
-          margin: 0;
-        }
-      }
-      p {
-        font-size: 1em;
-        margin-bottom: 0;
-      }
+    }
+    img {
+      width: 80px;
     }
   }
 }
@@ -193,18 +180,7 @@ section>.container {
 // MEDIA QUERIES
 
 @media (max-width: 992px) {
-  .skills {
-    .technologies {
-      .skill-box {
-        i.fab {
-          font-size: 3em;
-        }
-        h5 {
-          font-size: 1.5em;
-        }
-      }
-    }
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -221,55 +197,19 @@ section>.container {
 
   .skills {
     .technologies {
-      // border: 5px solid #fff;
-      text-align: left;
-      .col-12 {
+      .col {
         padding: 0;
       }
-      .col-colored {
-        background-color: #fff;
-        border-radius: 10px;
-      }
       .skill-box {
-        display: inline-flex;
-        flex-wrap: wrap;
-        width: 19%;
-        text-align: center;
-        margin: 5px 0 5px 0;
-        h5 {
-          font-size: 1.3em;
-        }
+        height: 5rem;
+      }
+      img {
+        width: 60px;
       }
     }
   }
 }
 
 @media (max-width: 576px) {
-  .skills {
-    .technologies {
-      .col-12 {
-        padding-left: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-      }
-      .skill-box {
-        height: 3.5rem;
-        width: 50%;
-        i.fab {
-          display: none;
-        }
-        p {
-          font-size: 1em;
-          font-weight: bold;
-        }
-        h5 {
-          font-size: 1em;
-          &.icon-size {
-            display: none;
-          }
-        }
-      }
-    }
-  }
+
 }
