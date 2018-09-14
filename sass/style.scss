@@ -1,3 +1,8 @@
+// COLORS
+
+$background-color: #F6F6F6;
+$main-color: #333333;
+
 // GLOBAL
 
 * {
@@ -8,7 +13,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #333333;
+  color: $main-color;
   font-size: 1em;
 }
 
@@ -17,8 +22,8 @@ section>.container {
   padding-bottom: 60px;
 }
 
-.border-box {
-  border: 1px solid #333333;
+.box-shadow {
+  box-shadow: 0 8px 20px #cecccc;
 }
 
 .headline {
@@ -39,36 +44,36 @@ section>.container {
   min-height: 100vh;
   background: url('../images/back.jpg');
   background-size: cover;
-  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-position: 100% 40%;
   transition: all 0.5s ease-in-out;
   .navbar-light {
     background-color: #fff;
     .navbar-nav .nav-link {
-      color: #333333;
+      color: $main-color;
       font-size: 1.2em;
       margin: 5px 35px 5px 35px;
       &:hover {
-        border-bottom: 1px solid #333333;
+        border-bottom: 1px solid $main-color;
       }
     }
     .navbar-collapse {
       text-align: center;
     }
   }
-}
-
-.introduction {
-  height: 60vh;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .introduction-box {
-    text-align: center;
-    font-family: 'Slabo 27px', serif;
-    padding: 40px;
-    h1 {
-      font-size: 3em;
+  .introduction {
+    height: 60vh;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .introduction-box {
+      text-align: center;
+      font-family: 'Slabo 27px', serif;
+      padding: 40px;
+      h1 {
+        font-size: 3em;
+      }
     }
   }
 }
@@ -83,8 +88,8 @@ section>.container {
   .cv {
     text-decoration: none;
     font-size: 1.5em;
-    color: #333333;
-    font-weight: bold;
+    color: $main-color;
+    // font-weight: bold;
     letter-spacing: 1px;
     &:hover {
       color: #ea7c3c;
@@ -105,7 +110,7 @@ section>.container {
 // SKILLS
 
 .skills {
-  background-color: #f6f6f6;
+  background-color: $background-color;
   text-align: center;
   .skills-desc {
     margin-bottom: 3rem;
@@ -129,6 +134,15 @@ section>.container {
   background-color: #fff;
   padding-bottom: 60px;
   text-align: center;
+  i.fa-github {
+    font-size: 8em;
+    padding-bottom: 30px;
+    color: #24292E;
+    transition: .5s;
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
   h3.headline {
     margin-bottom: 50px;
   }
@@ -136,7 +150,8 @@ section>.container {
     display: block;
   }
   .project-box {
-    box-shadow: 0 0 5px #cecccc;
+    // box-shadow: 0 0 5px #cecccc;
+    box-shadow: 0 8px 20px #cecccc;
     margin-bottom: 60px;
     background-color: #fff;
     border-left: 20px solid #fff;
@@ -200,26 +215,80 @@ section>.container {
       display: inline-block;
       padding: 0 .4rem;
       margin: 0 .5rem .5rem .5rem;
-      border: 1px solid #333333;
+      border: 1px solid $main-color;
       background-color: inherit;
     }
   }
 }
 
+
+// CONTACT - FOOTER
+
+.contact-footer {
+  background: url(../images/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 45%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .contact {
+    text-align: center;
+    height: 40vh;
+    display: flex;
+    align-items: flex-end;
+    h3.headline {
+      padding-bottom: 40px;
+    }
+    a {
+      text-decoration: none;
+      max-width: 150px;
+      max-height: 150px;
+      width: 10vw;
+      height: 10vw;
+      margin: 0 20px;
+      background-color: white;
+      box-shadow: 0 8px 20px #cecccc;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 3em;
+        &.fa-linkedin {
+          color: #0077B5;
+        }
+        &.fa-at {
+          color: #ea7c3c;
+        }
+        &.fa-github {
+          color: #24292E;
+        }
+      }
+    }
+
+  }
+  footer p {
+    color: $background-color;
+  }
+}
+
+
 // MEDIA QUERIES
 
 @media (max-width: 992px) {
-  .portfolio {
-    .empty {
-      display: none;
+  .contact {
+    a {
+      width: 15vw;
+      height: 15vw;
     }
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    transition: all 0.5s ease-in-out;
-    background-position: 50% 15%;
+    background-position: 50% 25%;
   }
 
   .about {
@@ -249,5 +318,17 @@ section>.container {
 }
 
 @media (max-width: 576px) {
-
+  .header {
+    background-position: 50% 25%;
+  }
+  .contact {
+    a {
+      width: 20vw;
+      height: 20vw;
+      margin: 0 10px;
+      i {
+        font-size: 2.5em;
+      }
+    }
+  }
 }
