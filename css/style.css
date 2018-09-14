@@ -44,13 +44,15 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .portfolio h3.headline { margin-bottom: 50px; }
 
+.portfolio p.portfolio-info { display: block; }
+
 .portfolio .project-box { box-shadow: 0 0 5px #cecccc; margin-bottom: 60px; background-color: #fff; border-left: 20px solid #fff; border-right: 20px solid #fff; border-top: 20px solid #fff; }
 
 .portfolio .project-box .img-box { position: relative; }
 
 .portfolio .project-box .img-box:hover .layer { opacity: 1; }
 
-.portfolio .project-box .img-box img { width: 100%; height: 300px; -o-object-fit: cover; object-fit: cover; }
+.portfolio .project-box .img-box img { width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; }
 
 .portfolio .project-box .img-box .layer { position: absolute; width: 100%; height: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; background-color: rgba(0, 0, 0, 0.8); color: #fff; transition: .5s; opacity: 0; }
 
@@ -72,4 +74,5 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
   .about .border-box { border: none; }
   .skills .technologies .col { padding: 0; }
   .skills .technologies .skill-box { height: 5rem; }
-  .skills .technologies img { width: 60px; } }
+  .skills .technologies img { width: 60px; }
+  .portfolio p.portfolio-info { display: none; } }

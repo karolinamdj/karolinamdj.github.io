@@ -122,6 +122,9 @@ section>.container {
   h3.headline {
     margin-bottom: 50px;
   }
+  p.portfolio-info {
+    display: block;
+  }
   .project-box {
     box-shadow: 0 0 5px #cecccc;
     margin-bottom: 60px;
@@ -138,7 +141,7 @@ section>.container {
       }
       img {
         width: 100%;
-        height: 300px;
+        height: 100%;
         object-fit: cover;
       }
       .layer {
@@ -226,6 +229,11 @@ section>.container {
       img {
         width: 60px;
       }
+    }
+  }
+  .portfolio {
+    p.portfolio-info {
+      display: none;
     }
   }
 }
