@@ -10,21 +10,23 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .paragraph { font-size: 1em; }
 
-.header { min-height: 100vh; background: url("../images/back.jpg"); background-size: cover; background-repeat: no-repeat; background-position: 100% 40%; transition: all 0.5s ease-in-out; }
+.header { min-height: 100vh; background: url("../images/back2.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 75%; }
 
-.header .navbar-light { background-color: #fff; }
+.header .navbar { background-color: #fff; position: absolute; width: 100%; }
 
-.header .navbar-light .navbar-nav .nav-link { color: #333333; font-size: 1.2em; margin: 5px 35px 5px 35px; }
+.header .navbar .navbar-nav .nav-link { color: #333333; font-size: 1.2em; margin: 5px 35px 5px 35px; }
 
-.header .navbar-light .navbar-nav .nav-link:hover { border-bottom: 1px solid #333333; }
+.header .navbar .navbar-nav .nav-link:hover { border-bottom: 1px solid #333333; }
 
-.header .navbar-light .navbar-collapse { text-align: center; }
+.header .navbar .navbar-collapse { text-align: center; }
 
-.header .introduction { height: 60vh; color: #000; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
+.header .introduction { height: 75vh; color: #000; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
-.header .introduction .introduction-box { text-align: center; font-family: 'Slabo 27px', serif; padding: 40px; }
+.header .introduction .introduction-box { text-align: center; font-family: 'Slabo 27px', serif; padding: 40px; transition: opacity .5s ease-out; }
 
 .header .introduction .introduction-box h1 { font-size: 3em; }
+
+.header .introduction .introduction-box h2 { font-size: 2em; }
 
 .about .border-box { padding: 1rem; }
 
@@ -96,13 +98,14 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 @media (max-width: 992px) { .contact a { width: 15vw; height: 15vw; } }
 
-@media (max-width: 768px) { .header { background-position: 50% 25%; }
-  .about .border-box { border: none; }
+@media (max-width: 768px) { .about .border-box { border: none; }
   .skills .technologies .col { padding: 0; }
   .skills .technologies .skill-box { height: 5rem; }
   .skills .technologies img { width: 60px; }
   .portfolio p.portfolio-info { display: none; } }
 
-@media (max-width: 576px) { .header { background-position: 50% 25%; }
+@media (max-width: 576px) { .header .introduction .introduction-box { padding: 25px; }
+  .header .introduction .introduction-box h1 { font-size: 2em; }
+  .header .introduction .introduction-box h2 { font-size: 1.5em; }
   .contact a { width: 20vw; height: 20vw; margin: 0 10px; }
   .contact a i { font-size: 2.5em; } }

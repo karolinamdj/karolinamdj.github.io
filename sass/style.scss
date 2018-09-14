@@ -42,19 +42,22 @@ section>.container {
 
 .header {
   min-height: 100vh;
-  background: url('../images/back.jpg');
+  background: url('../images/back2.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 100% 40%;
-  transition: all 0.5s ease-in-out;
-  .navbar-light {
+  background-position: 50% 75%;
+  .navbar {
     background-color: #fff;
-    .navbar-nav .nav-link {
+    position: absolute;
+    width: 100%;
+    .navbar-nav {
+      .nav-link {
       color: $main-color;
       font-size: 1.2em;
       margin: 5px 35px 5px 35px;
       &:hover {
         border-bottom: 1px solid $main-color;
+        }
       }
     }
     .navbar-collapse {
@@ -62,7 +65,7 @@ section>.container {
     }
   }
   .introduction {
-    height: 60vh;
+    height: 75vh;
     color: #000;
     display: flex;
     justify-content: center;
@@ -71,8 +74,12 @@ section>.container {
       text-align: center;
       font-family: 'Slabo 27px', serif;
       padding: 40px;
+      transition: opacity .5s ease-out;
       h1 {
         font-size: 3em;
+      }
+      h2 {
+        font-size: 2em;
       }
     }
   }
@@ -89,7 +96,6 @@ section>.container {
     text-decoration: none;
     font-size: 1.5em;
     color: $main-color;
-    // font-weight: bold;
     letter-spacing: 1px;
     &:hover {
       color: #ea7c3c;
@@ -287,10 +293,6 @@ section>.container {
 }
 
 @media (max-width: 768px) {
-  .header {
-    background-position: 50% 25%;
-  }
-
   .about {
     .border-box {
       border: none;
@@ -319,7 +321,17 @@ section>.container {
 
 @media (max-width: 576px) {
   .header {
-    background-position: 50% 25%;
+    .introduction {
+      .introduction-box {
+        padding: 25px;
+        h1 {
+          font-size: 2em;
+        }
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+    }
   }
   .contact {
     a {
