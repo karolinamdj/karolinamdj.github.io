@@ -80,6 +80,16 @@ section>.container {
   .border-box {
     padding: 1rem;
   }
+  .cv {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #333333;
+    font-weight: bold;
+    letter-spacing: 1px;
+    &:hover {
+      color: #ea7c3c;
+    }
+  }
   .photo-container {
     display: flex;
     justify-content: center;

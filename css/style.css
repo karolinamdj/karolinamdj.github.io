@@ -28,6 +28,10 @@ section > .container { padding-top: 60px; padding-bottom: 60px; }
 
 .about .border-box { padding: 1rem; }
 
+.about .cv { text-decoration: none; font-size: 1.5em; color: #333333; font-weight: bold; letter-spacing: 1px; }
+
+.about .cv:hover { color: #ea7c3c; }
+
 .about .photo-container { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
 .about .photo-container img { height: 250px; border-radius: 50%; }
