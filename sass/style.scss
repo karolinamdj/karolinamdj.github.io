@@ -41,22 +41,37 @@ section>.container {
 // HEADER
 
 .header {
-  min-height: 100vh;
+  height: 100vh;
   background: url('../images/back.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 75%;
+  transition: background-position 5ms ease;
   .navbar {
     background-color: #fff;
     position: absolute;
     width: 100%;
     .navbar-nav {
       .nav-link {
-      color: $main-color;
-      font-size: 1.2em;
-      margin: 5px 35px 5px 35px;
-      &:hover {
-        border-bottom: 1px solid $main-color;
+        color: $main-color;
+        font-size: 1.2em;
+        margin: 5px 35px 5px 35px;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: $main-color;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s;
+        }
+        &:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
         }
       }
     }
@@ -356,6 +371,12 @@ section>.container {
 }
 
 @media (max-width: 768px) {
+  .header .navbar .navbar-nav .nav-link {
+    &:hover:before {
+      visibility: hidden;
+    }
+  }
+
   .about {
     text-align: center;
     .cv {
