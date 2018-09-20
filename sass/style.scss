@@ -42,7 +42,7 @@ section>.container {
 
 .header {
   min-height: 100vh;
-  background: url('../images/back2.png');
+  background: url('../images/back.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 75%;
@@ -93,12 +93,18 @@ section>.container {
     padding: 1rem;
   }
   .cv {
+    display: block;
+    width: 100px;
+    text-align: center;
     text-decoration: none;
-    font-size: 1.5em;
-    color: $main-color;
+    font-size: 1.3em;
+    color: #000;
     letter-spacing: 1px;
+    border: 1px solid #383838;
+    transition: .5s;
     &:hover {
-      color: #ea7c3c;
+      background-color: #000;
+      color: #fff;
     }
   }
   .photo-container {
@@ -138,7 +144,6 @@ section>.container {
 
 .portfolio {
   background-color: #fff;
-  padding-bottom: 60px;
   text-align: center;
   i.fa-github {
     font-size: 8em;
@@ -156,8 +161,7 @@ section>.container {
     display: block;
   }
   .project-box {
-    // box-shadow: 0 0 5px #cecccc;
-    box-shadow: 0 8px 20px #cecccc;
+    box-shadow: 2px 5px 20px #cecccc;
     margin-bottom: 60px;
     background-color: #fff;
     border-left: 20px solid #fff;
@@ -209,18 +213,21 @@ section>.container {
     }
   }
   .project-info {
+    padding-bottom: 20px;
     h5 {
+      font-size: 1.4em;
       padding: 1rem 0;
       margin: 0;
     }
     .desc {
-      padding: 1rem 0;
+      font-size: 1em;
       margin: 0;
     }
     .tech-box {
       display: inline-block;
+      font-size: 1em;
       padding: 0 .4rem;
-      margin: 0 .5rem .5rem .5rem;
+      margin: 0 .5rem 1.5rem .5rem;
       border: 1px solid $main-color;
       background-color: inherit;
     }
@@ -231,10 +238,10 @@ section>.container {
 // CONTACT - FOOTER
 
 .contact-footer {
-  background: url(../images/back.jpg);
+  background: url('../images/back.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 100% 45%;
+  background-position: 50% 75%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -242,9 +249,14 @@ section>.container {
   align-items: center;
   .contact {
     text-align: center;
-    height: 40vh;
+    height: 70vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    p.email {
+      color: #ea7c3c;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
     h3.headline {
       padding-bottom: 40px;
     }
@@ -252,11 +264,12 @@ section>.container {
       text-decoration: none;
       max-width: 150px;
       max-height: 150px;
-      width: 10vw;
-      height: 10vw;
+      width: 15vw;
+      height: 15vw;
       margin: 0 20px;
       background-color: white;
-      box-shadow: 0 8px 20px #cecccc;
+      box-shadow: 2px 5px 20px #cecccc;
+      // box-shadow: 0 8px 20px #cecccc;
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -275,8 +288,16 @@ section>.container {
     }
 
   }
-  footer p {
-    color: $background-color;
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 1em;
+      color: $background-color;
+      padding: 0 15px;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -284,18 +305,65 @@ section>.container {
 // MEDIA QUERIES
 
 @media (max-width: 992px) {
-  .contact {
-    a {
-      width: 15vw;
-      height: 15vw;
+  .header {
+    .introduction {
+      height: 85vh;
+      .introduction-box {
+        padding: 25px;
+        h1 {
+          font-size: 2.5em;
+        }
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    i.fa-github {
+      &:hover {
+        transform: none;
+      }
+    }
+    .project-box {
+      .img-box {
+        .layer {
+          justify-content: flex-end;
+          align-items: flex-end;
+          background-color: transparent;
+          opacity: 1;
+          .project-icons {
+            padding: 5px;
+            a {
+              background-color: rgba(0, 0, 0, 0.8);
+              border-radius: 8px;
+              margin: 0 0.3em;
+              &:hover {
+                i.fas {
+                  transform: none;
+                }
+              }
+              i.fas {
+                font-size: 1.5em;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media (max-width: 768px) {
   .about {
-    .border-box {
-      border: none;
+    text-align: center;
+    .cv {
+      margin: 0 auto 40px auto;
+      &:hover {
+        background-color: inherit;
+        color: #000;
+      }
     }
   }
 
@@ -312,7 +380,9 @@ section>.container {
       }
     }
   }
+
   .portfolio {
+    padding-bottom: 5px;
     p.portfolio-info {
       display: none;
     }
@@ -320,26 +390,55 @@ section>.container {
 }
 
 @media (max-width: 576px) {
+  .paragraph {
+    font-size: 0.9em;
+  }
+
   .header {
     .introduction {
       .introduction-box {
-        padding: 25px;
         h1 {
           font-size: 2em;
         }
         h2 {
-          font-size: 1.5em;
+          font-size: 1.2em;
         }
       }
     }
   }
-  .contact {
-    a {
-      width: 20vw;
-      height: 20vw;
-      margin: 0 10px;
-      i {
-        font-size: 2.5em;
+
+  .portfolio {
+    .project-info {
+      h5 {
+        font-size: 1.1em;
+      }
+      .desc {
+        display: none;
+      }
+      .tech-box {
+        font-size: 0.8em ;
+        margin: 0 0.3rem 0 0.3rem;
+      }
+    }
+  }
+
+  .contact-footer {
+    .contact {
+      a {
+        width: 20vw;
+        height: 20vw;
+        margin: 0 5px;
+        i {
+          font-size: 2.5em;
+        }
+      }
+    }
+    footer {
+      flex-direction: column;
+      align-items: center;
+      p {
+        margin-bottom: 0.3rem;
+        font-size: 0.8em;
       }
     }
   }
