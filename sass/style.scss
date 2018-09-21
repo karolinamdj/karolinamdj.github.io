@@ -100,6 +100,8 @@ section>.container {
   }
 }
 
+// Introduction animation
+
 .anim-typewriter {
   overflow: hidden;
   border-right: 3px solid #0a6f73;
@@ -173,8 +175,18 @@ section>.container {
     }
     img {
       width: 80px;
+      // transition: .5s;
+      animation: pulse 4s infinite ease;
     }
   }
+}
+
+// skills icons animation
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  50% { transform: scale(0.8); }
+  to { transform: scale(1); }
 }
 
 // PORTFOLIO
