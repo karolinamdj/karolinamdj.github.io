@@ -100,6 +100,28 @@ section>.container {
   }
 }
 
+.anim-typewriter {
+  overflow: hidden;
+  border-right: 3px solid #0a6f73;
+  padding-right: 2px;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  animation:
+    typing 3.5s steps(30, end),
+    blick-caret .8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blick-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0a6f73 }
+}
+
 
 // ABOUT
 
@@ -371,9 +393,12 @@ section>.container {
 }
 
 @media (max-width: 768px) {
-  .header .navbar .navbar-nav .nav-link {
-    &:hover:before {
-      visibility: hidden;
+  .header {
+    // background-attachment: fixed;
+    .navbar .navbar-nav .nav-link {
+      &:hover:before {
+        visibility: hidden;
+      }
     }
   }
 
