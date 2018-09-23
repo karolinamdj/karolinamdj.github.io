@@ -2,6 +2,7 @@
 
 $background-color: #F6F6F6;
 $main-color: #333333;
+$shadow: 2px 5px 20px #cecccc;
 
 // GLOBAL
 
@@ -9,6 +10,10 @@ $main-color: #333333;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -85,7 +90,7 @@ section>.container {
       text-align: center;
       font-family: 'Slabo 27px', serif;
       padding: 40px;
-      box-shadow: 2px 5px 20px #cecccc;
+      box-shadow: $shadow;
       transition: opacity .5s ease-out;
       h1 {
         font-size: 3em;
@@ -111,7 +116,7 @@ section>.container {
   span {
     display: block;
     position: absolute;
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: $main-color;
     border-radius: 9px;
@@ -175,6 +180,30 @@ section>.container {
   50% { border-color: #0a6f73 }
 }
 
+// Arrows
+
+.arrow-box {
+  display: block;
+  bottom: 25px;
+  left: 50%;
+  position: absolute;
+  animation: down 2.5s infinite ease;
+  .arrow {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes down {
+  from { transform: translateY(0); opacity: 0.5;}
+  50% { transform: translateY(10px); opacity: 1}
+  to { transform: translateY(0); opacity: 0.5;}
+}
+
 
 // ABOUT
 
@@ -193,7 +222,7 @@ section>.container {
     border: 1px solid #383838;
     transition: .5s;
     &:hover {
-      background-color: #000;
+      background-color: #0c0c0c;
       color: #fff;
     }
   }
@@ -207,7 +236,6 @@ section>.container {
     }
   }
 }
-
 
 // SKILLS
 
@@ -260,7 +288,7 @@ section>.container {
     display: block;
   }
   .project-box {
-    box-shadow: 2px 5px 20px #cecccc;
+    box-shadow: $shadow;
     margin-bottom: 60px;
     background-color: #fff;
     border-left: 20px solid #fff;
@@ -367,11 +395,15 @@ section>.container {
       height: 15vw;
       margin: 0 20px;
       background-color: white;
-      box-shadow: 2px 5px 20px #cecccc;
-      // box-shadow: 0 8px 20px #cecccc;
+      box-shadow: $shadow;
       display: inline-flex;
       justify-content: center;
       align-items: center;
+      transition: .5s;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 2px 5px 20px #8e8e8e;
+      }
       i {
         font-size: 3em;
         &.fa-linkedin {
@@ -460,23 +492,26 @@ section>.container {
       display: flex;
       justify-content: flex-end;
       &.nav-collapse {
-        height: 100vh;
-        background-color: rgba(255, 255, 255, 0.2);
       }
       .nav-icon {
         display: block;
+        z-index: 2;
       }
       .nav-links {
         display: none;
-        width: 75%;
-        padding-top: 10vh;
       }
       .show-links {
         display: block;
         position: absolute;
+        z-index: 1;
+        padding-top: 8vh;
         width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(#ffffff, rgba(255, 255, 255, 0.2));
+        animation: smooth .5s ease-in-out;
         .nav-link {
           display: block;
+          padding: 17px 0;
           &:hover:before {
             visibility: hidden;
           }
@@ -487,6 +522,12 @@ section>.container {
       .hide {
         opacity: 0;
       }
+    }
+  }
+
+  .arrow-box {
+    &.hide {
+      display: none;
     }
   }
 
@@ -517,10 +558,18 @@ section>.container {
 
   .portfolio {
     padding-bottom: 5px;
+    .fa-github {
+      display: none;
+    }
     p.portfolio-info {
       display: none;
     }
   }
+}
+
+@keyframes smooth {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (max-width: 576px) {
