@@ -15,6 +15,14 @@ menuIcon.addEventListener('click', () => {
   nav.classList.toggle('nav-collapse');
 });
 
+menuLinks.addEventListener('click', () => {
+  introduction.classList.toggle('hide');
+  arrow.classList.toggle('hide');
+  menuIcon.classList.toggle('open');
+  menuLinks.classList.toggle('show-links');
+  nav.classList.toggle('nav-collapse');
+})
+
 
 // slide header background image
 

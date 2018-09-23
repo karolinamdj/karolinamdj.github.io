@@ -184,14 +184,15 @@ section>.container {
 
 .arrow-box {
   display: block;
-  bottom: 25px;
-  left: 50%;
+  bottom: 20px;
+  width: 100%;
   position: absolute;
   animation: down 2.5s infinite ease;
   .arrow {
+    display: block;
     width: 20px;
     height: 20px;
-    margin: 10px;
+    margin: 15px auto;
     border-right: 1px solid white;
     border-bottom: 1px solid white;
     transform: rotate(45deg);
@@ -491,6 +492,9 @@ section>.container {
     nav {
       display: flex;
       justify-content: flex-end;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
       &.nav-collapse {
       }
       .nav-icon {
