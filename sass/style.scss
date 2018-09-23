@@ -22,10 +22,6 @@ section>.container {
   padding-bottom: 60px;
 }
 
-.box-shadow {
-  box-shadow: 0 8px 20px #cecccc;
-}
-
 .headline {
   font-family: 'Slabo 27px', serif;
   font-size: 2.5em;
@@ -47,15 +43,18 @@ section>.container {
   background-repeat: no-repeat;
   background-position: 50% 75%;
   transition: background-position 5ms ease;
-  .navbar {
+  nav {
     background-color: #fff;
-    position: absolute;
-    width: 100%;
-    .navbar-nav {
+    padding-bottom: 0.5rem;
+    height: 50px;
+    .nav-links {
+      text-align: center;
       .nav-link {
+        display: inline-block;
+        padding: 0.6rem 0 0.3rem 0;
+        margin: 0 2rem 0 2rem;
         color: $main-color;
         font-size: 1.2em;
-        margin: 5px 35px 5px 35px;
         position: relative;
         &:before {
           content: "";
@@ -75,12 +74,9 @@ section>.container {
         }
       }
     }
-    .navbar-collapse {
-      text-align: center;
-    }
   }
   .introduction {
-    height: 75vh;
+    height: 65vh;
     color: #000;
     display: flex;
     justify-content: center;
@@ -89,12 +85,67 @@ section>.container {
       text-align: center;
       font-family: 'Slabo 27px', serif;
       padding: 40px;
+      box-shadow: 2px 5px 20px #cecccc;
       transition: opacity .5s ease-out;
       h1 {
         font-size: 3em;
       }
       h2 {
         font-size: 2em;
+      }
+    }
+  }
+}
+
+// Hamburger menu icon
+
+.nav-icon {
+  display: none;
+  width: 40px;
+  height: 45px;
+  position: relative;
+  margin: 10px 20px 0 0;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: $main-color;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .2s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      top: 12px;
+    }
+    &:nth-child(4) {
+      top: 24px;
+    }
+  }
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 12px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(4) {
+        top: 12px;
+        width: 0%;
+        left: 50%;
       }
     }
   }
@@ -175,7 +226,6 @@ section>.container {
     }
     img {
       width: 80px;
-      // transition: .5s;
       animation: pulse 4s infinite ease;
     }
   }
@@ -356,7 +406,7 @@ section>.container {
 @media (max-width: 992px) {
   .header {
     .introduction {
-      height: 85vh;
+      // height: 85vh;
       .introduction-box {
         padding: 25px;
         h1 {
@@ -406,10 +456,36 @@ section>.container {
 
 @media (max-width: 768px) {
   .header {
-    // background-attachment: fixed;
-    .navbar .navbar-nav .nav-link {
-      &:hover:before {
-        visibility: hidden;
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      &.nav-collapse {
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      .nav-icon {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        width: 75%;
+        padding-top: 10vh;
+      }
+      .show-links {
+        display: block;
+        position: absolute;
+        width: 100%;
+        .nav-link {
+          display: block;
+          &:hover:before {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+    .introduction {
+      .hide {
+        opacity: 0;
       }
     }
   }

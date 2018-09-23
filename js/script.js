@@ -1,16 +1,18 @@
 
-// hide h1
+//  hamburger menu handle
 
-let navbarToggler = document.querySelector('.navbar-toggler');
+let menuIcon = document.querySelector('.nav-icon');
+let menuLinks = document.querySelector('.nav-links');
+let nav = document.querySelector('nav');
 let introduction = document.querySelector('.introduction-box');
 
-navbarToggler.addEventListener('click', () => {
-  if (introduction.style.opacity === "0") {
-    introduction.style.opacity = "1";
-  } else {
-    introduction.style.opacity = "0";
-  }
+menuIcon.addEventListener('click', () => {
+  introduction.classList.toggle('hide');
+  menuIcon.classList.toggle('open');
+  menuLinks.classList.toggle('show-links');
+  nav.classList.toggle('nav-collapse');
 });
+
 
 // slide header background image
 
