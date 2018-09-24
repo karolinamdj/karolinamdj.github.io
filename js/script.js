@@ -1,11 +1,22 @@
+// typing start after page load
 
-//  hamburger menu handle
+let typedText = document.querySelector('.introduction-box h2');
 
-let menuIcon = document.querySelector('.nav-icon');
-let menuLinks = document.querySelector('.nav-links');
-let nav = document.querySelector('nav');
-let introduction = document.querySelector('.introduction-box');
-let arrow = document.querySelector('.arrow-box');
+window.addEventListener('load', () => {
+    typedText.classList.add('anim-typewriter');
+  setTimeout(() => {
+    introduction.classList.add('introduction-shadow');
+  }, 3600);
+});
+
+
+//  show and hide hambuger menu handle
+
+const menuIcon = document.querySelector('.nav-icon');
+const menuLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('nav');
+const introduction = document.querySelector('.introduction-box');
+const arrow = document.querySelector('.arrow-box');
 
 menuIcon.addEventListener('click', () => {
   introduction.classList.toggle('hide');
@@ -14,6 +25,8 @@ menuIcon.addEventListener('click', () => {
   menuLinks.classList.toggle('show-links');
   nav.classList.toggle('nav-collapse');
 });
+
+// hide menu after clicking on links
 
 menuLinks.addEventListener('click', () => {
   introduction.classList.toggle('hide');
@@ -26,7 +39,7 @@ menuLinks.addEventListener('click', () => {
 
 // slide header background image
 
-let bgImage = document.querySelector('.header');
+const bgImage = document.querySelector('.header');
 let lastScrollTop = 0;
 let bgY = 75;
 

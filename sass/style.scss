@@ -23,8 +23,8 @@ body {
 }
 
 section>.container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .headline {
@@ -84,7 +84,7 @@ section>.container {
     }
   }
   .introduction {
-    height: 65vh;
+    height: 75vh;
     color: #000;
     display: flex;
     justify-content: center;
@@ -93,16 +93,44 @@ section>.container {
       text-align: center;
       font-family: 'Slabo 27px', serif;
       padding: 40px;
-      box-shadow: $shadow;
-      transition: opacity .5s ease-out;
+      transition: all .5s ease-out;
       h1 {
         font-size: 3em;
+        margin-bottom: 0;
+        line-height: normal;
       }
       h2 {
         font-size: 2em;
+        &.anim-typewriter {
+          overflow: hidden;
+          border-right: 3px solid #0a6f73;
+          padding-right: 2px;
+          white-space: nowrap;
+          margin: 0 auto;
+          letter-spacing: 1px;
+          animation:
+            typing 3.5s steps(30, end),
+            blick-caret .8s step-end infinite;
+        }
       }
     }
+    .introduction-shadow {
+      box-shadow: $shadow;
+    }
   }
+}
+
+// Introduction animation
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blick-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0a6f73 }
 }
 
 // Hamburger menu icon
@@ -159,29 +187,6 @@ section>.container {
   }
 }
 
-// Introduction animation
-
-.anim-typewriter {
-  overflow: hidden;
-  border-right: 3px solid #0a6f73;
-  padding-right: 2px;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 1px;
-  animation:
-    typing 3.5s steps(30, end),
-    blick-caret .8s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blick-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #0a6f73 }
-}
 
 // Arrows
 
