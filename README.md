@@ -9,5 +9,6 @@ Rozwiązania, technologie i narzędzia:
 - CSS 3
 - Sass
 - RWD
+- JavaScript
 - Bootstrap 4 (grid)
 - npm (task runner)
