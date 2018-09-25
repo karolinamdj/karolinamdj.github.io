@@ -82,6 +82,58 @@ section>.container {
         }
       }
     }
+    // Hamburger menu icon
+    .nav-icon {
+      display: none;
+      width: 40px;
+      height: 45px;
+      position: relative;
+      margin: 10px 20px 0 0;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      cursor: pointer;
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $main-color;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .2s ease-in-out;
+        &:nth-child(1) {
+          top: 0px;
+        }
+        &:nth-child(2), &:nth-child(3) {
+          top: 12px;
+        }
+        &:nth-child(4) {
+          top: 24px;
+        }
+      }
+      &.open {
+        span {
+          &:nth-child(1) {
+            top: 12px;
+            width: 0%;
+            left: 50%;
+          }
+          &:nth-child(2) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+          }
+          &:nth-child(4) {
+            top: 12px;
+            width: 0%;
+            left: 50%;
+          }
+        }
+      }
+    }
   }
   .introduction {
     height: 75vh;
@@ -133,62 +185,9 @@ section>.container {
   50% { border-color: #0a6f73 }
 }
 
-// Hamburger menu icon
-
-.nav-icon {
-  display: none;
-  width: 40px;
-  height: 45px;
-  position: relative;
-  margin: 10px 20px 0 0;
-  transform: rotate(0deg);
-  transition: .5s ease-in-out;
-  cursor: pointer;
-  span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: $main-color;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .2s ease-in-out;
-    &:nth-child(1) {
-      top: 0px;
-    }
-    &:nth-child(2), &:nth-child(3) {
-      top: 12px;
-    }
-    &:nth-child(4) {
-      top: 24px;
-    }
-  }
-  &.open {
-    span {
-      &:nth-child(1) {
-        top: 12px;
-        width: 0%;
-        left: 50%;
-      }
-      &:nth-child(2) {
-        transform: rotate(45deg);
-      }
-      &:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-      &:nth-child(4) {
-        top: 12px;
-        width: 0%;
-        left: 50%;
-      }
-    }
-  }
-}
 
 
-// Arrows
+// Arrow
 
 .arrow-box {
   display: block;
@@ -314,6 +313,7 @@ section>.container {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border: 1px solid #d6d1d1;
       }
       .layer {
         position: absolute;
