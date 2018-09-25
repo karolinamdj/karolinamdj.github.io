@@ -20,33 +20,6 @@ let hasTouch = () => {
   }
 }
 
-//  show and hide hambuger menu handle
-
-const menuIcon = document.querySelector('.nav-icon');
-const menuLinks = document.querySelector('.nav-links');
-const nav = document.querySelector('nav');
-const introduction = document.querySelector('.introduction-box');
-const arrow = document.querySelector('.arrow-box');
-
-menuIcon.addEventListener('click', () => {
-  introduction.classList.toggle('hide');
-  arrow.classList.toggle('hide');
-  menuIcon.classList.toggle('open');
-  menuLinks.classList.toggle('show-links');
-  nav.classList.toggle('nav-collapse');
-});
-
-// hide menu after clicking on links
-
-menuLinks.addEventListener('click', () => {
-  introduction.classList.toggle('hide');
-  arrow.classList.toggle('hide');
-  menuIcon.classList.toggle('open');
-  menuLinks.classList.toggle('show-links');
-  nav.classList.toggle('nav-collapse');
-})
-
-
 // slide header background image
 
 const bgImage = document.querySelector('.header');
@@ -58,3 +31,23 @@ window.addEventListener('scroll', () => {
   let bgY = st == 0 ? 75 : 75 - (st * 0.04);
   bgImage.style.backgroundPosition = `50% ${bgY}%`;
 }, false);
+
+
+//  hangle menu and navnav
+
+const menuIcon = document.querySelector('.nav-icon');
+const menuLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('nav');
+const introduction = document.querySelector('.introduction-box');
+const arrow = document.querySelector('.arrow-box');
+
+let toggleMenu = () => {
+  introduction.classList.toggle('hide');
+  arrow.classList.toggle('hide');
+  menuIcon.classList.toggle('open');
+  menuLinks.classList.toggle('show-links');
+  nav.classList.toggle('nav-collapse');
+};
+
+menuIcon.addEventListener('click', toggleMenu);
+menuLinks.addEventListener('click', toggleMenu);

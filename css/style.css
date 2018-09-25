@@ -12,6 +12,10 @@ section > .container { padding-top: 90px; padding-bottom: 90px; }
 
 .header { height: 100vh; background: url("../images/back.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 75%; transition: background-position 5ms ease; }
 
+.header .logo { position: absolute; top: 14px; left: 12px; color: #545454; }
+
+.header .logo i.fas { font-size: 1.2em; }
+
 .header nav { background-color: #fff; padding-bottom: 0.5rem; height: 50px; position: fixed; width: 100%; z-index: 10; }
 
 .header nav .nav-links { text-align: center; }
