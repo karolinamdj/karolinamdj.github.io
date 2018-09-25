@@ -1,14 +1,24 @@
-// typing start after page load
-
 let typedText = document.querySelector('.introduction-box h2');
+let projectBox = document.querySelectorAll('.project-box');
 
 window.addEventListener('load', () => {
-    typedText.classList.add('anim-typewriter');
+
+  // typing start after page load
+  typedText.classList.add('anim-typewriter');
   setTimeout(() => {
     introduction.classList.add('introduction-shadow');
   }, 3600);
+
+  // check if device is touchable and remove hover from portfolios
+  hasTouch();
 });
 
+
+let hasTouch = () => {
+  if ('ontouchstart' in window || 'ontouch' in window) {
+    projectBox.forEach(box => box.classList.add('project-box-touch-device'))
+  }
+}
 
 //  show and hide hambuger menu handle
 

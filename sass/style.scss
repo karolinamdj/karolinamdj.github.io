@@ -348,6 +348,35 @@ section>.container {
       }
     }
   }
+
+// if this is touch device
+  .project-box-touch-device {
+    .img-box {
+      .layer {
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-color: transparent;
+        opacity: 1;
+        .project-icons {
+          padding: 5px;
+          a {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            margin: 0 0.3em;
+            &:hover {
+              i.fas {
+                transform: none;
+              }
+            }
+            i.fas {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .project-info {
     padding-bottom: 20px;
     h5 {
@@ -466,32 +495,32 @@ section>.container {
         transform: none;
       }
     }
-    .project-box {
-      .img-box {
-        .layer {
-          justify-content: flex-end;
-          align-items: flex-end;
-          background-color: transparent;
-          opacity: 1;
-          .project-icons {
-            padding: 5px;
-            a {
-              background-color: rgba(0, 0, 0, 0.8);
-              border-radius: 8px;
-              margin: 0 0.3em;
-              &:hover {
-                i.fas {
-                  transform: none;
-                }
-              }
-              i.fas {
-                font-size: 1.5em;
-              }
-            }
-          }
-        }
-      }
-    }
+    // .project-box {
+    //   .img-box {
+    //     .layer {
+    //       justify-content: flex-end;
+    //       align-items: flex-end;
+    //       background-color: transparent;
+    //       opacity: 1;
+    //       .project-icons {
+    //         padding: 5px;
+    //         a {
+    //           background-color: rgba(0, 0, 0, 0.8);
+    //           border-radius: 8px;
+    //           margin: 0 0.3em;
+    //           &:hover {
+    //             i.fas {
+    //               transform: none;
+    //             }
+    //           }
+    //           i.fas {
+    //             font-size: 1.5em;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 

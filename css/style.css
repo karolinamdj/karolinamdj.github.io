@@ -117,6 +117,16 @@ section > .container { padding-top: 90px; padding-bottom: 90px; }
 
 .portfolio .project-box .img-box .layer a i.fas { font-size: 2.5em; color: #fff; transition: .5s; }
 
+.portfolio .project-box-touch-device .img-box .layer { -ms-flex-pack: end; justify-content: flex-end; -ms-flex-align: end; align-items: flex-end; background-color: transparent; opacity: 1; }
+
+.portfolio .project-box-touch-device .img-box .layer .project-icons { padding: 5px; }
+
+.portfolio .project-box-touch-device .img-box .layer .project-icons a { background-color: rgba(0, 0, 0, 0.8); border-radius: 8px; margin: 0 0.3em; }
+
+.portfolio .project-box-touch-device .img-box .layer .project-icons a:hover i.fas { transform: none; }
+
+.portfolio .project-box-touch-device .img-box .layer .project-icons a i.fas { font-size: 1.5em; }
+
 .portfolio .project-info { padding-bottom: 20px; }
 
 .portfolio .project-info h5 { font-size: 1.4em; padding: 1rem 0; margin: 0; }
@@ -152,12 +162,7 @@ section > .container { padding-top: 90px; padding-bottom: 90px; }
 @media (max-width: 992px) { .header .introduction .introduction-box { padding: 25px; }
   .header .introduction .introduction-box h1 { font-size: 2.5em; }
   .header .introduction .introduction-box h2 { font-size: 1.5em; }
-  .portfolio i.fa-github:hover { transform: none; }
-  .portfolio .project-box .img-box .layer { -ms-flex-pack: end; justify-content: flex-end; -ms-flex-align: end; align-items: flex-end; background-color: transparent; opacity: 1; }
-  .portfolio .project-box .img-box .layer .project-icons { padding: 5px; }
-  .portfolio .project-box .img-box .layer .project-icons a { background-color: rgba(0, 0, 0, 0.8); border-radius: 8px; margin: 0 0.3em; }
-  .portfolio .project-box .img-box .layer .project-icons a:hover i.fas { transform: none; }
-  .portfolio .project-box .img-box .layer .project-icons a i.fas { font-size: 1.5em; } }
+  .portfolio i.fa-github:hover { transform: none; } }
 
 @media (max-width: 768px) { .header nav { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; }
   .header nav .nav-icon { display: block; z-index: 2; }
