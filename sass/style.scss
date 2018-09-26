@@ -292,15 +292,6 @@ section>.container {
 .portfolio {
   background-color: #fff;
   text-align: center;
-  i.fa-github {
-    font-size: 8em;
-    padding-bottom: 30px;
-    color: #24292E;
-    transition: .5s;
-    &:hover {
-      transform: scale(0.8);
-    }
-  }
   h3.headline {
     margin-bottom: 50px;
   }
@@ -409,6 +400,18 @@ section>.container {
       background-color: inherit;
     }
   }
+  .space {
+    height: 180px;
+  }
+  .more {
+    height: 150px;
+    a {
+      font-size: 1.8em;
+      line-height: 180px;
+      color: #333333;
+      text-decoration: none;
+    }
+  }
 }
 
 
@@ -502,9 +505,10 @@ section>.container {
   }
 
   .portfolio {
-    i.fa-github {
-      &:hover {
-        transform: none;
+    .project-info {
+      .tech-box {
+        margin: 0 .4rem .5rem .4rem;
+        font-size: .9em;
       }
     }
   }
@@ -580,21 +584,26 @@ section>.container {
       }
     }
   }
-
-  .portfolio {
-    padding-bottom: 5px;
-    .fa-github {
-      display: none;
-    }
-    p.portfolio-info {
-      display: none;
-    }
-  }
 }
 
 @keyframes smooth {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+    padding-bottom: 5px;
+    .space {
+      display: none;
+    }
+    .more {
+      height: 120px;
+      a {
+        line-height: 120px;
+      }
+    }
+  }
 }
 
 @media (max-width: 576px) {

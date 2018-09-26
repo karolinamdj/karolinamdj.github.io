@@ -97,10 +97,6 @@ section > .container { padding-top: 90px; padding-bottom: 90px; }
 
 .portfolio { background-color: #fff; text-align: center; }
 
-.portfolio i.fa-github { font-size: 8em; padding-bottom: 30px; color: #24292E; transition: .5s; }
-
-.portfolio i.fa-github:hover { transform: scale(0.8); }
-
 .portfolio h3.headline { margin-bottom: 50px; }
 
 .portfolio p.portfolio-info { display: block; }
@@ -139,6 +135,12 @@ section > .container { padding-top: 90px; padding-bottom: 90px; }
 
 .portfolio .project-info .tech-box { display: inline-block; font-size: 1em; padding: 0 .4rem; margin: 0 .5rem 1.5rem .5rem; border: 1px solid #333333; background-color: inherit; }
 
+.portfolio .space { height: 180px; }
+
+.portfolio .more { height: 150px; }
+
+.portfolio .more a { font-size: 1.8em; line-height: 180px; color: #333333; text-decoration: none; }
+
 .contact-footer { background: url("../images/back.png"); background-size: cover; background-repeat: no-repeat; background-position: 50% 75%; height: 100vh; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-align: center; align-items: center; }
 
 .contact-footer .contact { text-align: center; height: 70vh; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; }
@@ -166,7 +168,7 @@ section > .container { padding-top: 90px; padding-bottom: 90px; }
 @media (max-width: 992px) { .header .introduction .introduction-box { padding: 25px; }
   .header .introduction .introduction-box h1 { font-size: 2.5em; }
   .header .introduction .introduction-box h2 { font-size: 1.5em; }
-  .portfolio i.fa-github:hover { transform: none; } }
+  .portfolio .project-info .tech-box { margin: 0 .4rem .5rem .4rem; font-size: .9em; } }
 
 @media (max-width: 768px) { .header nav { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; }
   .header nav .nav-icon { display: block; z-index: 2; }
@@ -181,13 +183,15 @@ section > .container { padding-top: 90px; padding-bottom: 90px; }
   .about .cv:hover { background-color: inherit; color: #000; }
   .skills .technologies .col { padding: 0; }
   .skills .technologies .skill-box { height: 5rem; }
-  .skills .technologies img { width: 60px; }
-  .portfolio { padding-bottom: 5px; }
-  .portfolio .fa-github { display: none; }
-  .portfolio p.portfolio-info { display: none; } }
+  .skills .technologies img { width: 60px; } }
 
 @keyframes smooth { from { opacity: 0; }
   to { opacity: 1; } }
+
+@media (max-width: 767px) { .portfolio { padding-bottom: 5px; }
+  .portfolio .space { display: none; }
+  .portfolio .more { height: 120px; }
+  .portfolio .more a { line-height: 120px; } }
 
 @media (max-width: 576px) { .paragraph { font-size: 0.9em; }
   .header .introduction .introduction-box h1 { font-size: 2em; }
